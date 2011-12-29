@@ -1,0 +1,8 @@
+Succeeded with account code: <%= @account_code %> and plan <%= @plan %>
+
+<p>
+  Active Subscriptions:
+  <% @active_subscriptions.each do |active_subscription| %>
+    <%= active_subscription.plan.name %>
+  <% end %>
+</p>

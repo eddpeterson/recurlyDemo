@@ -1,0 +1,21 @@
+# Recurly allows recurring billings
+
+http://recurly.com/
+
+https://github.com/recurly/recurly-client-ruby
+
+http://docs.recurly.com/
+
+
+
+curl -H 'Accept: application/xml' \
+     -H 'Content-Type: application/xml; charset=utf-8' \
+     -u '<YOUR APP KEY>': https://api.recurly.com/v2/accounts
+     
+curl -H 'Accept: application/xml' \
+     -H 'Content-Type: application/xml; charset=utf-8' \
+     -u '<YOUR APP KEY>': https://api.recurly.com/v2/accounts/eddpeterson@gmail.com/
+    
+curl -H 'Accept: application/xml' \
+     -H 'Content-Type: application/xml; charset=utf-8' \
+     -u '<YOUR APP KEY>': https://api.recurly.com/v2/accounts/eddpeterson@gmail.com/subscriptions
