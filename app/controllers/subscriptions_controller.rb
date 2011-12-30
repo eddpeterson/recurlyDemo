@@ -23,4 +23,8 @@ class SubscriptionsController < ApplicationController
   
   def cancel
   end
+  
+  def basic_plan_integrated
+    
+  end
 end

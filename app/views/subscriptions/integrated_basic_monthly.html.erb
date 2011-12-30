@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RecurlyJS Subscribe Example</title> 
+<!-- <link rel="stylesheet" href="../style/reset.css" type="text/css" />  -->
+<!-- <link rel="stylesheet" href="examples.css" type="text/css" /> 
+<link rel="stylesheet" href="../themes/default/recurly.css" type="text/css" /> 
+<script src="../lib/jquery-1.7.1.js"></script> 
+<script src="../build/recurly.js"></script>  -->
+<script>
+  Recurly.config({
+    subdomain: 'huxap-test'
+  , currency: 'USD'
+  //, country: 'US'
+  });
+
+  Recurly.buildSubscriptionForm({
+    target: '#recurly-subscribe'
+  , planCode: 'basic_mothly'
+  , accountCode: '3'
+  , successURL: 'confirmation.html'
+  , distinguishContactFromBillingInfo: true
+  //, collectCompany: true
+  , enableCoupons: false
+  , termsOfServiceURL: 'http://example.com/tos'
+  , preFill: {
+      contactInfo: {
+        firstName: 'Joe'
+      , lastName: 'User'
+      , email: 'test@example.net'
+      , phone: '555-555-5555'
+      //, companyName: 'Acme'
+      }
+    , billingInfo: {
+        firstName: 'Joe'
+      , lastName: 'User'
+      , address1: '123 Somestreet'
+      , address2: '45'
+      , city: 'San Francisco'
+      , zip: '94107'
+      , state: 'CA'
+      , country: 'US'
+      }
+  }
+  });
+</script> 
+</head> 
+  <body> 
+    <h1>Subscribe to Plan</h1>
+    <h2>Plan Code: simpleplan (exists)</h2>
+    <div id="recurly-subscribe">
+    </div>
+  </body>
+</html>
